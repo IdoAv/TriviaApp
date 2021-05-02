@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TriviaApp.Views.Register"
+             xmlns:local ="clr-namespace:TriviaApp.CustomViews">
+    <StackLayout Padding="0" BackgroundColor="CadetBlue">
+        <BoxView  HeightRequest="30" Color="CadetBlue"></BoxView>
+        <Frame CornerRadius="30" VerticalOptions="FillAndExpand" HasShadow="True" Margin="0,-30,0,0" BorderColor="Gray">
+            <StackLayout Margin="20,20,20,0">
+                <Frame HorizontalOptions="FillAndExpand" CornerRadius="50" BorderColor="Gray" BackgroundColor="White" HeightRequest="40"  Margin="0,0,0,20" Padding="0">
+                    <local:CustomEntry Placeholder="Email" Text="{Binding Email}">
+
+                    </local:CustomEntry>
+                </Frame>
+                <Frame HorizontalOptions="FillAndExpand" CornerRadius="50" BorderColor="Gray" BackgroundColor="White" HeightRequest="40"  Margin="0,0,0,20" Padding="0">
+                    <local:CustomEntry Placeholder="NickName" Text="{Binding NickName}">
+
+                    </local:CustomEntry>
+                </Frame>
+                <Frame HorizontalOptions="FillAndExpand" CornerRadius="50" BorderColor="Gray" BackgroundColor="White" HeightRequest="40" Margin="0,0,0,20" Padding="0">
+                    <local:CustomEntry Placeholder="Password" IsPassword="True" Text="{Binding Password}">
+
+                    </local:CustomEntry>
+                </Frame>
+                <Label FontSize="Small" TextColor="Red" Text="{Binding Error}"></Label>
+                <Button CornerRadius="30" BackgroundColor="Blue" Text="Register" TextColor="White" Command="{Binding RegisterCommand}"></Button>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>
